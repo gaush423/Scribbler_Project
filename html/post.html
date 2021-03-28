@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post List</title>
+
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/post.css">
+</head>
+<body>
+
+<div class="Signup_modal">
+    <div  class="signup_form">
+        <span class="signup_close">&times;</span>
+        <h1>Get Started</h1>
+        <hr>
+
+        <form>
+            <p>Full Name</p>
+            <input type="text"  class="name"  placeholder="Enter Full Name" required>
+
+            <p>Username</p>
+            <input type="text" class="u_name" placeholder="Enter Username" required>
+
+            <p>Password</p>
+            <input type="password" class="pass" placeholder="Enter Password" required>
+
+            <p> Confirm Password</p>
+            <input type="password" class="c_pass" placeholder="Confirm Password" required>
+
+            <input type="submit"class="sup_button" value="Sign up" >
+        </form>
+
+    </div>
+</div>
+
+<div class="Signin_modal">
+    <div class="signin_form">
+        <span class="signin_close">&times;</span>
+        <h1>Welcome Back!</h1>
+        <hr>
+
+        <form>
+            <p>Username</p>
+            <input type="text" class="u_name" placeholder="Enter Username" required>
+
+            <p>Password</p>
+            <input type="password" class="pass" placeholder="Enter Password" required>
+
+            <input type="submit" class="sin_button"  value="Submit">
+
+        </form>
+        <h3 class="Nan_member">Not a member?<a class="signup_in_signin"><span> Sign up </span></a></h3>
+
+    </div>
+</div>
+
+<div class="header">
+    <button class="topButtons" id="btn">Sign Up</button>
+    <button class="topButtons">Sign In</button>
+    <a  class="logo-title">ScriBBler</a>
+    <p class="middleText">Explore, Imagine, Create</p>
+</div>
+
+<div class="parent_container">
+    <h1 id="container_heading_1">History of Technology</h1>
+    <input type="text" id="container_heading_1_edit">
+    <div class="container_name_edit">
+        <p id="name">Author</p>
+        <button id="edit" onclick="edit_post()">Edit <img src="https://img.icons8.com/metro/15/ffffff/edit-property.png"/></button>
+        <button id="save" onclick="save_post()">Save <img src="https://img.icons8.com/ios-filled/15/ffffff/save--v1.png"/></button>
+    </div>
+    <p id="post_body">
+        The term technology is derived from the ancient Greek words “techne” and “logos”, which 
+        translates to “art, craft” and “word, speech” respectively. The term was used for the first time 
+        in the 17th century, and it was denoted to mean “a discussion of the applied arts”. However, with 
+        the industrial movement beginning in the 20th century, the term “technology” was used to represent a range of processes and techniques, in addition to machinery and tools. Over time, the term was used to associate scientific progress and breakthroughs in various disciplines.
+        
+
+    </p>
+    <!-- hidden body for edit -->
+    <textarea id="post_body_edit"></textarea>
+    <button id="like" onclick="like_post()"><img src="https://img.icons8.com/fluent-systems-filled/20/ffffff/facebook-like.png"/>Like</button>
+    <p id="like_counter">Be first one to like this!</p>
+    <textarea id="comment_add_content" placeholder="leave a comment..."></textarea><br>
+    <button id="comment" onclick="post_comment()">Comment</button>
+    <h3 id="comment_head">ALL Comments</h3>
+    <div id="all_comment">
+
+    </div>
+</div>
+
+
+<script src="../scripts/post.js"></script>
+<script src="../scripts/header.js"></script>
+</body>
+</html>
